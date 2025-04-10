@@ -9,8 +9,10 @@ function App() {
     if (!isPlaying) {
       const newAudio = new Audio('/stony.mp3')
       newAudio.loop = true // repeat forever
+      audio.volume = 1
       newAudio.play()
       setAudio(newAudio)
+      
       setIsPlaying(true)
     } else {
       audio?.pause()
